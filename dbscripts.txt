@@ -1,0 +1,15 @@
+CREATE TABLE users (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(255),
+    email varchar(255) UNIQUE NOT NULL,
+    entries int  DEFAULT 0,
+    joined TIMESTAMP NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE login (
+    id int NOT NULL AUTO_INCREMENT,
+    email varchar(255) UNIQUE NOT NULL,
+    hash varchar(255) NOT NULL,
+    PRIMARY KEY (id)
+);
